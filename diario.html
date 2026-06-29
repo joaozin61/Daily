@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Diário Minimalista 🌸</title>
+    <style>
+        /* Cores em tons de Rosa Pastel e Minimalista */
+        :root {
+            --bg-color: #fff5f7;
+            --card-bg: #ffffff;
+            --text-main: #4a3538;
+            --text-muted: #8a6d71;
+            --accent-pink: #ffb3c1;
+            --accent-light: #ffe5ec;
+            --border-color: #f7d6dc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 25px 15px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Container que centraliza no Celular ou PC */
+        .diario-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Topo do Diário */
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding: 20px 0;
+            border-bottom: 2px dashed var(--border-color);
+        }
+
+        .sub-header {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Separadores de Páginas/Temas */
+        .secao-titulo {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin: 30px 0 15px 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+
+        /* Cards das Questões */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(255, 179, 193, 0.1);
+        }
+
+        .pergunta {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .num {
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .resposta {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            background-color: var(--bg-color);
+            padding: 12px 15px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-pink);
+            text-align: justify;
+        }
+
+        /* Sistema de Emojis Voadores em Segundo Plano */
+        .emoji-bg {
+            position: fixed;
+            top: -10%;
+            font-size: 28px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: subir 14s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(110vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(60px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="emoji-bg" style="left: 8%; animation-delay: 0s; animation-duration: 12s;">🦄</div>
+    <div class="emoji-bg" style="left: 28%; animation-delay: 3s; animation-duration: 15s;">🎀</div>
+    <div class="emoji-bg" style="left: 48%; animation-delay: 1s; animation-duration: 14s;">⭐</div>
+    <div class="emoji-bg" style="left: 68%; animation-delay: 5s; animation-duration: 16s;">💖</div>
+    <div class="emoji-bg" style="left: 88%; animation-delay: 2s; animation-duration: 11s;">🦄</div>
+    <div class="emoji-bg" style="left: 18%; animation-delay: 7s; animation-duration: 13s;">✨</div>
+    <div class="emoji-bg" style="left: 78%; animation-delay: 9s; animation-duration: 14s;">🎀</div>
+
+    <div class="diario-container">
+        
+        <header>
+            <div class="sub-header">Minhas Resoluções</div>
+            <h1>Meu Diário Acadêmico 🎀</h1>
+        </header>
+
+        <main>
+            <div class="secao-titulo">📖 Por dentro do texto</div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">1. a)</span> Qual é a preocupação manifestada pelo autor em relação a afirmações como essa?</div>
+                <div class="resposta">O autor se preocupa com a aceitação de opiniões e informações sem questionamento ou verificação, o que contribui para a disseminação de ideias equivocadas e preconceitos.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">1. b)</span> Que sujeitos são vítimas desse tipo de opinião naturalizada?</div>
+                <div class="resposta">São vítimas as chamadas "minorias" no esporte, como mulheres, pessoas LGBTQIA+, atletas transgêneros e outros grupos que não se enquadram no padrão considerado dominante.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">1. c)</span> Em oposição a essas supostas "minorias no esporte", qual seria o modelo predominante? Segundo o autor, o que instituiria a normatividade no campo esportivo? Qual é a principal crítica do autor a essa normatização?</div>
+                <div class="resposta">O modelo predominante é o do homem branco, magro ou musculoso, heterossexual e cristão. Esse modelo é tratado como padrão e referência no esporte. O autor critica essa normatização porque ela exclui e marginaliza pessoas que não correspondem a esse padrão, classificando-as como "anormais" ou "minorias".</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">2.</span> O autor apresenta os exemplos do futebol brasileiro e do canadense para expor a fragilidade do conceito de minorias no esporte. Quais são o dado e o argumento apresentados para contestar essa ideia de minoria?</div>
+                <div class="resposta">O dado apresentado é que, no Brasil, o futebol de campo masculino é visto como referência, enquanto no Canadá o esporte nacional de destaque é o hóquei. O argumento é que o conceito de "minoria" depende do contexto social e cultural, mostrando que essa classificação não é fixa nem natural.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">3.</span> Segundo o autor, de que maneira discussões como as propostas no texto podem ajudar no enfrentamento de opressões sofridas pelas ditas "minorias sociais, sexuais e étnicas"?</div>
+                <div class="resposta">Essas discussões ajudam a questionar preconceitos, desconstruir padrões excludentes e promover respeito, inclusão e igualdade de direitos para todos os grupos sociais.</div>
+            </div>
+
+            <div class="secao-titulo">✨ Papo aberto sobre os textos (Pág. 78)</div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">1.</span> Qual é a sua opinião sobre as diferenças salariais e de premiações entre homens e mulheres no esporte?</div>
+                <div class="resposta">As diferenças são injustas quando atletas têm desempenho e dedicação semelhantes. O reconhecimento e a valorização das mulheres no esporte devem crescer para reduzir essa desigualdade.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">2. a)</span> De acordo com a autora, qual é a justificativa, no contexto da lógica de mercado, para Marta receber um valor tão inferior ao de Neymar?</div>
+                <div class="resposta">Porque o futebol masculino gera mais receitas com patrocínios, transmissões e investimentos privados, atraindo mais dinheiro para o mercado esportivo.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">2. b)</span> Qual é sua opinião sobre a adoção da lógica de mercado para determinar salários e premiações de homens e mulheres no esporte?</div>
+                <div class="resposta"><strong>Resposta pessoal (exemplo):</strong> A lógica de mercado influencia os salários, mas não deveria ser o único criterion. O esforço, o talento e os resultados dos atletas também devem ser considerados para que haja mais igualdade.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">3. a)</span> Qual é esse fator?</div>
+                <div class="resposta">A representação do esporte pela mídia.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">3. b)</span> De acordo com a pesquisadora, esse fator tem um efeito importante na construção da identidade das mulheres. Que efeito é esse?</div>
+                <div class="resposta">A mídiaิ produz poucas referências femininas no esporte, dificultando a valorização e a identificação das mulheres com as práticas esportivas.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">3. c)</span> Você concorda com a pesquisadora? Justifique.</div>
+                <div class="resposta"><strong>Resposta pessoal (exemplo):</strong> Sim. A mídia tem grande influência na sociedade. Quando as atletas recebem mais visibilidade, elas se tornam exemplos e incentivam outras mulheres a praticarem esportes.</div>
+            </div>
+
+            <div class="card">
+                <div class="pergunta"><span class="num">4.</span> Relacione as experiências vivenciadas no Bora pra quadra? com as desigualdades de gênero nos salários e nas premiações de esportistas.</div>
+                <div class="resposta">As situações vividas mostram que homens e mulheres nem sempre recebem as mesmas oportunidades e reconhecimento. Essa desigualdade também aparece no esporte profissional, onde muitas atletas recebem salários e premiações menores, apesar de seu talento e dedicação.</div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Criado com ⭐ e 🦄 • Meu Diário Digital</p>
+        </footer>
+    </div>
+
+</body>
+</html>
